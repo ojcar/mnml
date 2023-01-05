@@ -20,40 +20,26 @@
 	<?php wp_head(); ?>
 </head>
 
+
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mnml' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$mnml_description = get_bloginfo( 'description', 'display' );
-			if ( $mnml_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $mnml_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mnml' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+    <div class=pad2y style=position:relative>
+        <div class=only-print>
+            <h2><?php bloginfo( 'name' ); ?></h2>
+            <div style=margin-top:0;>https://www.twitter.com/@vega</div>
+        </div>
+        <nav class=header-wrap>
+            <div class="header nu limiter no-print">
+                <h2 style="line-height:1.6;font-size:1rem;margin:0 0 0.25em 0;"><?php bloginfo( 'name' ); ?></h2>
+                <ul style=list-style:none;padding:0;margin:0;>
+                    <li><a href=/>log</a></li>
+                    <li><a href=/lecturas/>lecturas</a></li>
+                    <li><a href=/pelis/>lo que vi</a></li>
+                    <li><a href=/series/>series</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
