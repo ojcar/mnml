@@ -35,9 +35,9 @@
                 <h2 style="line-height:1.6;font-size:1rem;margin:0 0 0.25em 0;"><?php bloginfo( 'name' ); ?></h2>
                 <ul style=list-style:none;padding:0;margin:0;>
                     <li><a href=/>log</a></li>
-                    <li><a href=/lecturas/>lecturas</a></li>
-                    <li><a href=/pelis/>lo que vi</a></li>
-                    <li><a href=/series/>series</a></li>
+                    <li><a href=/cat/lecturas/>lecturas</a></li>
+                    <li><a href=/cat/pelis/>lo que vi</a></li>
+                    <li><a href=/cat/series/>series</a></li>
                 </ul>
             </div>
         </nav>

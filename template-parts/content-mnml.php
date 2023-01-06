@@ -9,7 +9,5 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>">
-	<?php the_title( '<div><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></div>' );?>
-	<time><?php mnml_posted_timestamp(); ?></time>
-</div><!-- #post-<?php the_ID(); ?> -->
+<?php the_title( '<div id="post-' . the_ID() . '"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></div>' );?>
+<?php mnml_posted_timestamp(); ?>
