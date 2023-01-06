@@ -7,6 +7,24 @@
  * @package mnml
  */
 
+if ( ! function_exists( 'mnml_posted_timestamp' ) ) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time.
+	 */
+	function mnml_posted_timestamp() {
+		$time_string = '<time datetime="%1$s">%2$s</time>';
+		
+		$time_string = sprintf(
+			$time_string,
+			esc_attr( get_the_date( DATE_W3C ) ),
+			esc_html( get_the_date('Y-m-d') )
+		);
+
+		echo '<span>' . $time_string . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
+endif;
+
 if ( ! function_exists( 'mnml_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.

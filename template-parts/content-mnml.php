@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="post-<?php the_ID(); ?>">
 	<?php the_title( '<div><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></div>' );?>
-	<time><?php mnml_posted_on(); ?></time>
-</article><!-- #post-<?php the_ID(); ?> -->
+	<time><?php mnml_posted_timestamp(); ?></time>
+</div><!-- #post-<?php the_ID(); ?> -->
